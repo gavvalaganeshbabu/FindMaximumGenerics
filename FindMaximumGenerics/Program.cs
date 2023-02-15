@@ -11,7 +11,7 @@ namespace FindMaximumGenerics
             string a = Console.ReadLine();
             string b = Console.ReadLine();
             string c = Console.ReadLine();
-            string output = FindMaximum.FindMaximumValue(a, b, c);
+            string output = FindMaximum.MaxString(a, b, c);
             Console.WriteLine("Maximum Value = " + output);
         }
     }
