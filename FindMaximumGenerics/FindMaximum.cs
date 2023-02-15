@@ -6,7 +6,7 @@ namespace FindMaximumGenerics
 {
     internal class FindMaximum
     {
-        public static float FindMaximumValue(float firstValue, float secondValue, float thirdValue)
+        public static string FindMaximumValue(string firstValue, string secondValue, string thirdValue)
         {
             if (firstValue.CompareTo(secondValue) > 0 && secondValue.CompareTo(thirdValue) > 0)
             {
