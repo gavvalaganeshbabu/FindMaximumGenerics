@@ -8,10 +8,10 @@ namespace FindMaximumGenerics
         {
             Console.WriteLine("Welcome TO TestMaximum Application By Using Generics :");
             Console.WriteLine("Enter the Values What you want to check :");
-            int a = int.Parse(Console.ReadLine());
-            int b = int.Parse(Console.ReadLine());
-            int c = int.Parse(Console.ReadLine());
-            int output = FindMaximum.FindMaximumValue(a, b, c);
+            float a = float.Parse(Console.ReadLine());
+            float b = float.Parse(Console.ReadLine());
+            float c = float.Parse(Console.ReadLine());
+            float output = FindMaximum.FindMaximumValue(a, b, c);
             Console.WriteLine("Maximum Value = " + output);
         }
     }
