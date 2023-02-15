@@ -4,23 +4,39 @@ using System.Text;
 
 namespace FindMaximumGenerics
 {
-    internal class FindMaximum
-    {
-        public static string FindMaximumValue(string firstValue, string secondValue, string thirdValue)
+ 
+        public class FindMaximum<T> where T : IComparable<T>
         {
-            if (firstValue.CompareTo(secondValue) > 0 && secondValue.CompareTo(thirdValue) > 0)
+            private T first_Value;
+            private T second_Value;
+            private T third_Value;
+            public FindMaximum(T first_Value, T second_Value, T third_Value)
             {
-                return firstValue;
+                this.first_Value = first_Value;
+                this.second_Value = second_Value;
+                this.third_Value = third_Value;
             }
-            if (secondValue.CompareTo(firstValue) > 0 && secondValue.CompareTo(thirdValue) > 0)
+            public static T GetMaximum(T first_Value, T second_Value, T third_Value)
             {
-                return secondValue;
+                if (first_Value.CompareTo(second_Value) > 0 && first_Value.CompareTo(third_Value) > 0)
+                {
+                    return first_Value;
+                }
+                else if (second_Value.CompareTo(first_Value) > 0 && second_Value.CompareTo(third_Value) > 0)
+                {
+                    return second_Value;
+                }
+                else if (third_Value.CompareTo(first_Value) > 0 && third_Value.CompareTo(second_Value) > 0)
+                {
+                    return third_Value;
+                }
+                else
+                {
+                    throw new Exception("Values are same");
+                }
+
             }
-            if (thirdValue.CompareTo(firstValue) > 0 && thirdValue.CompareTo(secondValue) > 0)
-            {
-                return thirdValue;
-            }
-            throw new Exception("firstvalue ,secondvalur,thirdvalue are same");
         }
     }
-}
+
+
